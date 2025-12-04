@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Privacy Inc. - Privacy for users, compliance for issuers</title>
+    <title>Financial Privacy Inc. - Coming Soon</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -62,6 +62,10 @@
             }
         }
         
+        .logo {
+            margin-bottom: 2rem;
+        }
+        
         h1 {
             font-family: 'Playfair Display', serif;
             font-size: clamp(2.5rem, 6vw, 4rem);
@@ -85,92 +89,27 @@
             }
         }
         
-        .paragraphs-container {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin: 3rem 0;
-            flex-wrap: wrap;
-        }
-
-        .paragraph-box {
-            background: rgba(255, 255, 255, 0.15);
-            color: #ffffff;
-            padding: 1.5rem;
-            border-radius: 12px;
-            max-width: 350px;
-            text-align: left;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            font-weight: 500;
-            backdrop-filter: blur(5px);
+        .subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            line-height: 1.7;
+            margin-bottom: 3rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 400;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
-        .paragraph-box:first-child {
-            border-left: 3px solid #60a5fa;
-        }
-
-        .paragraph-box:last-child {
-            border-left: 3px solid #60a5fa;
-        }
-        
-        .paragraph-box p {
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-
-        .diagram-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-            margin: 3rem 0;
-            flex-wrap: wrap;
-            position: relative;
-        }
-
-        .diagram-box {
-            background: rgba(255, 255, 255, 0.15);
-            color: #ffffff;
-            padding: 1rem 1.5rem;
-            border-radius: 12px;
-            width: 200px;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            font-weight: 500;
-            position: relative;
-            backdrop-filter: blur(5px);
-        }
-
-        .diagram-box h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .diagram-box p {
-            font-size: 0.9rem;
-            line-height: 1.4;
+        .coming-soon {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 400;
             color: rgba(255, 255, 255, 0.8);
+            margin: 2rem 0;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-family: 'Inter', sans-serif;
         }
-
-        .issuer {
-            border-top: 3px solid #60a5fa;
-        }
-
-        .fpi {
-            border-top: 3px solid #facc15;
-        }
-
-        .law-enforcement {
-            border-top: 3px solid #4ade80;
-        }
-
-        .arrow {
-            font-size: 2rem;
-            color: rgba(255, 255, 255, 0.5);
-            position: relative;
-            top: -15px;
-        }
+        
         
         footer {
             position: absolute;
@@ -201,18 +140,9 @@
                 padding: 1.5rem;
             }
             
-            .paragraphs-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .diagram-container {
-                flex-direction: column;
-            }
-
-            .arrow {
-                transform: rotate(90deg);
-                top: 0;
+            .features {
+                grid-template-columns: 1fr;
+                gap: 1rem;
             }
             
             footer {
@@ -266,32 +196,15 @@
     <div class="subtle-lines"></div>
     
     <div class="container">
-        <h1>Privacy for users, compliance for issuers</h1>
-        
-        <div class="paragraphs-container">
-            <div class="paragraph-box">
-                <p>Financial Privacy Inc. is a cryptography solution for stablecoins issuers, solving regulation risk of operating with privacy.</p>
-            </div>
-            <div class="paragraph-box">
-                <p>We offer issuers selective disclosure tools for use by law-enforcement, while keeping data private by default, with a secure system to manage audit keys.</p>
-            </div>
+        <div class="logo">
+            <h1>Financial Privacy Inc.</h1>
         </div>
-
-        <div class="diagram-container">
-            <div class="diagram-box issuer">
-                <h3>Issuer</h3>
-                <p>Privacy enabled stablecoin</p>
-            </div>
-            <div class="arrow">&rarr;</div>
-            <div class="diagram-box fpi">
-                <h3>Financial Privacy Inc.</h3>
-                <p>Audit keys<br>Encrypted data<br>Secure Enclave</p>
-            </div>
-            <div class="arrow">&rarr;</div>
-            <div class="diagram-box law-enforcement">
-                <h3>Law enforcement</h3>
-                <p>Regulators<br>Compliance</p>
-            </div>
+        
+        <p class="subtitle">Compliance Solutions for Privacy Stablecoins, allowing Financial Privacy for users, and Compliance for the Issuer.</p>
+        
+        
+        <div class="coming-soon">
+            COMING SOON
         </div>
     </div>
     
