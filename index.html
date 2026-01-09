@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Privacy Inc. - Coming Soon</title>
+    <title>Financial Privacy Inc.</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -14,221 +14,196 @@
         
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), 
-                        url('https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80') center/cover no-repeat fixed;
-            color: #ffffff;
+            background: #f0f2f5;
+            color: #333;
             text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            position: relative;
-            overflow-x: hidden;
-        }
-        
-        .background-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(16, 42, 67, 0.8) 0%, rgba(12, 31, 51, 0.9) 100%);
-            z-index: -1;
+            padding: 2rem;
         }
         
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
             padding: 2rem;
-            position: relative;
-            z-index: 1;
-            backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
-            animation: fadeInUp 1s ease-out;
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .logo {
-            margin-bottom: 2rem;
         }
         
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-size: clamp(2.5rem, 6vw, 3.5rem);
             font-weight: 600;
-            color: #ffffff;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
-            background: linear-gradient(135deg, #ffffff 0%, #e8f4fd 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: glow 2s ease-in-out infinite alternate;
+            color: #102a43;
+            margin-bottom: 2rem;
         }
         
-        @keyframes glow {
-            from {
-                text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-            }
-            to {
-                text-shadow: 0 0 30px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.3);
-            }
-        }
-        
-        .subtitle {
-            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-            line-height: 1.7;
+        .intro-boxes {
+            display: flex;
+            justify-content: space-between;
+            gap: 1.5rem;
             margin-bottom: 3rem;
-            color: rgba(255, 255, 255, 0.9);
-            font-weight: 400;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
         }
         
-        .coming-soon {
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
-            font-weight: 400;
-            color: rgba(255, 255, 255, 0.8);
-            margin: 2rem 0;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            font-family: 'Inter', sans-serif;
+        .intro-box {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            width: 48%;
+            text-align: left;
+            border-left: 5px solid #007bff;
         }
         
+        .intro-box p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+        }
         
-        footer {
+        .diagram {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 4rem;
+            position: relative;
+        }
+        
+        .diagram-box {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            width: 28%;
+            position: relative;
+        }
+        
+        .diagram-box h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            color: #102a43;
+        }
+        
+        .diagram-box p {
+            color: #555;
+        }
+
+        .issuer { border-top: 5px solid #3498db; }
+        .enclave { border-top: 5px solid #f1c40f; }
+        .enforcement { border-top: 5px solid #2ecc71; }
+
+        .arrow {
             position: absolute;
-            bottom: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15%;
+            text-align: center;
+        }
+        
+        .arrow p {
+            margin: 0;
+            font-weight: 500;
+            color: #555;
+        }
+
+        .arrow::after {
+            content: '→';
+            font-size: 2.5rem;
+            color: #aaa;
+        }
+        
+        .arrow-1 { left: 29%; }
+        .arrow-2 { right: 29%; }
+
+        .secure-enclave-box {
+            border: 2px solid #333;
+            padding: 1rem;
+            border-radius: 15px;
+            position: relative;
+            background: #fff8e1;
+        }
+
+        .secure-enclave-box::before {
+            content: 'Secure Enclave';
+            position: absolute;
+            bottom: -2rem;
             left: 50%;
             transform: translateX(-50%);
+            font-weight: 600;
+            color: #333;
+        }
+
+        .lock-icon {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            color: #f1c40f;
+        }
+        
+        footer {
+            margin-top: 4rem;
             font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
-            text-align: center;
-            backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        footer p {
-            margin-bottom: 0.25rem;
-        }
-        
-        footer p:last-child {
-            margin-bottom: 0;
+            color: #888;
         }
         
         @media (max-width: 768px) {
-            .container {
-                margin: 1rem;
-                padding: 1.5rem;
+            .intro-boxes, .diagram {
+                flex-direction: column;
+                gap: 1.5rem;
             }
-            
-            .features {
-                grid-template-columns: 1fr;
-                gap: 1rem;
+
+            .intro-box, .diagram-box {
+                width: 100%;
             }
-            
-            footer {
-                position: relative;
-                margin-top: 3rem;
-                margin-bottom: 0;
-            }
-            
-            body {
-                min-height: auto;
-                padding: 2rem 0;
-            }
-        }
-        
-        .subtle-lines {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 0;
-            opacity: 0.3;
-        }
-        
-        .line {
-            position: absolute;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            height: 1px;
-            width: 100%;
-            animation: slide 8s ease-in-out infinite;
-        }
-        
-        @keyframes slide {
-            0% {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-            50% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateX(100%);
-                opacity: 0;
+
+            .arrow {
+                display: none; /* Hide arrows on mobile for simplicity */
             }
         }
     </style>
 </head>
 <body>
-    <div class="background-overlay"></div>
-    <div class="subtle-lines"></div>
-    
     <div class="container">
-        <div class="logo">
-            <h1>Financial Privacy Inc.</h1>
+        <h1>Privacy for users, compliance for issuers</h1>
+        
+        <div class="intro-boxes">
+            <div class="intro-box">
+                <p>Financial Privacy Inc. is a cryptography solution for stablecoins issuers, solving regulation risk of operating with privacy.</p>
+            </div>
+            <div class="intro-box">
+                <p>We offer issuers selective disclosure tools for use by law-enforcement, while keeping data private by default, with a secure system to manage audit keys.</p>
+            </div>
         </div>
         
-        <p class="subtitle">Compliance Solutions for Privacy Stablecoins, allowing Financial Privacy for users, and Compliance for the Issuer.</p>
-        
-        
-        <div class="coming-soon">
-            COMING SOON
+        <div class="diagram">
+            <div class="diagram-box issuer">
+                <h3>Issuer</h3>
+                <p>Privacy enabled stablecoin</p>
+            </div>
+
+            <div class="arrow arrow-1"><p>disclosure policy</p></div>
+
+            <div class="diagram-box enclave">
+                <div class="secure-enclave-box">
+                    <h3>Financial Privacy Inc.</h3>
+                    <p>Audit keys</p>
+                    <p>Encrypted data</p>
+                    <div class="lock-icon">🔒</div>
+                </div>
+            </div>
+
+            <div class="arrow arrow-2"><p>selective disclosure</p></div>
+
+            <div class="diagram-box enforcement">
+                <h3>Law enforcement</h3>
+                <p>Regulators</p>
+                <p>Compliance</p>
+            </div>
         </div>
     </div>
     
     <footer>
-        <p>&copy; 2025 Financial Privacy Inc.</p>
-        <p>251 Little Falls Dr, Wilmington, DE 19808</p>
+        <p>&copy; 2025 Financial Privacy Inc. | 251 Little Falls Dr, Wilmington, DE 19808</p>
     </footer>
-    
-    <script>
-        function createSubtleLines() {
-            const linesContainer = document.querySelector('.subtle-lines');
-            const lineCount = 5;
-            
-            for (let i = 0; i < lineCount; i++) {
-                const line = document.createElement('div');
-                line.className = 'line';
-                line.style.top = Math.random() * 100 + '%';
-                line.style.animationDelay = Math.random() * 8 + 's';
-                line.style.animationDuration = (Math.random() * 4 + 6) + 's';
-                linesContainer.appendChild(line);
-            }
-        }
-        
-        document.addEventListener('DOMContentLoaded', createSubtleLines);
-    </script>
 </body>
 </html>
